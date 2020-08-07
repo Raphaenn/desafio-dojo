@@ -17,6 +17,10 @@ export default class UpdateClouds {
             let randomLine = Math.floor(Math.random() * lines);
             let randomColumn = Math.floor(Math.random() * columns)
             cloudMap[randomLine][randomColumn] = Point.Cloud
+
+            if(cloudMap[randomLine][randomColumn] === Point.Airport) {
+                cloudMap[randomLine + 1 ][randomColumn + 1] = Point.Airport
+            }
         }
         
         return cloudMap
