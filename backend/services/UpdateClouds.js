@@ -4,7 +4,6 @@ export default class UpdateClouds {
 
     hasAirport(element) {
         if (element.indexOf(Point.Airport) >= 0) {
-            console.log(element)
             return true;
         }
 
@@ -17,7 +16,7 @@ export default class UpdateClouds {
         for(let i = 0; i < clouds; i++) {
             let randomLine = Math.floor(Math.random() * lines);
             let randomColumn = Math.floor(Math.random() * columns)
-            airportMap[randomLine][randomColumn] = Point.Cloud
+            cloudMap[randomLine][randomColumn] = Point.Cloud
         }
         
         return cloudMap
