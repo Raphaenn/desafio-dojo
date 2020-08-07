@@ -1,0 +1,32 @@
+{
+  "specialization": {},
+
+  "middleware": {
+    "static": {
+      "module": {
+        "arguments": ["path:./.build"]
+      }
+    },
+    "csrf": {
+      "enabled": false,
+      "priority": 111,
+      "module": {
+        "name": "lusca",
+        "method": "csrf",
+        "arguments": [{ "csrf": false }]
+      }
+    },
+    "cors": {
+      "enabled": true,
+      "priority": 119,
+      "module": {
+        "name": "path:./middlewares/cors"
+      }
+    },
+    "router": {
+      "module": {
+        "arguments": [{ "directory": "path:./controllers" }]
+      }
+    }
+  }
+}
